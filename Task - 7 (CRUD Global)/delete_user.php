@@ -3,12 +3,15 @@
     $dbname = "crud-global"; 
     include '../include.php';
 
-    $data = json_decode(file_get_contents("php://input"));
-    $id = $data->id;
+    $id = $_POST['id'];
 
-    $sql = "DELETE FROM users WHERE id = :id";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute(['id' => $id]);
-
-    echo json_encode(["message" => "User deleted successfully"]);
+    // Delete the user from the database
+    $sql = "DELETE FROM users WHERE ID = $id"; // Ensure the correct column name
+    if ($conn->query($sql) === TRUE) {
+        echo "Record deleted successfully";
+    } else {
+        echo "Error: " . $conn->error;
+    }
+    
+    $conn->close();
 ?>

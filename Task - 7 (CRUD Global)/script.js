@@ -1,92 +1,69 @@
-document.addEventListener("DOMContentLoaded", () => {
+$(document).ready(function() {
+    // Display data when the page loads
     displayData();
 
-    document.getElementById("crudForm").addEventListener("submit", (e) => {
+    // Handle form submission
+    $("#crudForm").on("submit", function(e) {
         e.preventDefault();
+        
+        const name = $("#name").val();
+        const email = $("#email").val();
+        const phone = $("#phone").val();
+        const address = $("#address").val();
+        const index = $("#index").val();
+        
+        // Send data to PHP script via AJAX
+        $.ajax({
+            url: 'insert.php', // Your PHP script to insert data
+            type: 'POST',
+            data: {
+                name: name,
+                email: email,
+                phone: phone,
+                address: address,
+                index: index
+            },
+            success: function(response) {
+                // After success, clear the form and fetch updated data
+                console.log(response);
+                displayData();
+                $("#crudForm")[0].reset(); // Reset form after submission
+            },
+            error: function(xhr, status, error) {
+                alert('Error: ' + error);
+            }
+        });
+    });
 
-        const id = document.getElementById("index").value;
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const phone = document.getElementById("phone").value;
-        const address = document.getElementById("address").value;
+    // Display users
+    function displayData() {
+        $.ajax({
+            url: 'fetch.php', // Your PHP script to fetch user data
+            type: 'GET',
+            success: function(response) {
+                $("#dataList").html(response); // Insert the returned user data into the page
+            },
+            error: function(xhr, status, error) {
+                alert('Error: ' + error);
+            }
+        });
+    }
 
-        const data = { name, email, phone, address };
-
-        if (id === "") {
-            addUser(data);
-        } else {
-            updateUser(id, data);
-        }
-
-        document.getElementById("crudForm").reset();
+    // Handle delete user
+    $(document).on("click", ".delete-btn", function() {
+        const userId = $(this).data("id");
+        
+        $.ajax({
+            url: 'delete_user.php', // Your PHP script to delete user
+            type: 'POST',
+            data: { id: userId },
+            success: function(response) {
+                console.log(response);
+                displayData();
+            },
+            error: function(xhr, status, error) {
+                alert('Error: ' + error);
+            }
+        });
     });
 });
-
-// Function to fetch and display all users
-function displayData() {
-    fetch("fetch_users.php")
-        .then(response => response.json())
-        .then(users => {
-            const dataList = document.getElementById("dataList");
-            dataList.innerHTML = "";
-            users.forEach(user => {
-                const card = `
-                    <div class="col">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">${user.name}</h5>
-                                <p class="card-text">Email: ${user.email}</p>
-                                <p class="card-text">Phone: ${user.phone}</p>
-                                <p class="card-text">Address: ${user.address}</p>
-                                <button class="btn btn-outline-secondary btn-sm" onclick="editData(${user.id}, '${user.name}', '${user.email}', '${user.phone}', '${user.address}')">Edit</button>
-                                <button class="btn btn-secondary btn-sm" onclick="deleteUser(${user.id})">Delete</button>
-                            </div>
-                        </div>
-                    </div>`;
-                dataList.insertAdjacentHTML("beforeend", card);
-            });
-        });
-}
-
-// Function to add a new user
-function addUser(data) {
-    fetch("add_user.php", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
-    })
-    .then(response => response.json())
-    .then(() => displayData());
-}
-
-// Function to edit user data
-function editData(id, name, email, phone, address) {
-    document.getElementById("index").value = id;
-    document.getElementById("name").value = name;
-    document.getElementById("email").value = email;
-    document.getElementById("phone").value = phone;
-    document.getElementById("address").value = address;
-}
-
-// Function to update a user
-function updateUser(id, data) {
-    data.id = id;
-    fetch("update_user.php", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
-    })
-    .then(response => response.json())
-    .then(() => displayData());
-}
-
-// Function to delete a user
-function deleteUser(id) {
-    fetch("delete_user.php", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ id })
-    })
-    .then(response => response.json())
-    .then(() => displayData());
-}

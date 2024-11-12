@@ -1,23 +1,20 @@
 <?php
-
+    
     $dbname = "crud-global"; 
     include '../include.php';
 
-    // Get the form data
-    $id = $_POST['id'];
     $name = $_POST['name'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $address = $_POST['address'];
-
-    // Update the user data in the database
-    $sql = "UPDATE users SET Name = '$name', Email = '$email', Phone = '$phone', Address = '$address' WHERE ID = $id";
+    
+    // Insert data into the database
+    $sql = "INSERT INTO users (Name, Email, Phone, Address) VALUES ('$name', '$email', '$phone', '$address')";
     if ($conn->query($sql) === TRUE) {
-        echo "Record updated successfully";
+        echo "Record added successfully";
     } else {
         echo "Error: " . $conn->error;
     }
-
+    
     $conn->close();
-
 ?>

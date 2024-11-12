@@ -1,91 +1,47 @@
-<?php
-
-    $dbname = "crud-global"; 
-    include '../include.php';
-
-?>
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Application</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="icon" href="favicon.ico?v=1" type="image/x-icon">
 
-        <title>CRUD - Local Storage</title>
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"
-        />
-        <link rel="icon" href="favicon.ico">
-    </head>
+</head>
+<body>
+    <div class="container my-5">
+        <h2 class="text-center">PHP & MySQL CRUD Application</h2>
 
-    <body class="bg-dark">
-
-        <div class="container mt-5">
-
-            <p class="text-center text-white display-4 fw-bold">CRUD Application with Local Storage</p>
-
-            <div class="mb-4">
-
-                <form id="crudForm">
-
-                    <div class="mb-3">
-
-                        <label for="name" class="form-label text-white h5 fw-bold">Name</label>
-                        <input type="text" id="name" class="form-control" required>
-
-                    </div>
-
-                    <div class="mb-3">
-
-                        <label for="email" class="form-label text-white h5 fw-bold">Email</label>
-                        <input type="email" id="email" class="form-control" required>
-
-                    </div>
-
-                    <div class="mb-3">
-
-                        <label for="phone" class="form-label text-white h5 fw-bold">Phone Number</label>
-                        <input type="tel" id="phone" class="form-control" required>
-
-                    </div>
-                    
-                    <div class="mb-3">
-
-                        <label for="address" class="form-label text-white h5 fw-bold">Address</label>
-                        <input type="text" id="address" class="form-control" required>
-
-                    </div>
-
-                    <input type="hidden" id="index">
-
-                    <button type="submit" class="btn btn-light">Add</button>
-                    <button type="reset" class="btn btn-secondary">Reset</button>
-
-                </form>
-
+        <!-- Form for adding/updating users -->
+        <form id="crudForm" class="my-4">
+            <input type="hidden" id="index">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required>
             </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone</label>
+                <input type="text" class="form-control" id="phone" required>
+            </div>
+            <div class="mb-3">
+                <label for="address" class="form-label">Address</label>
+                <input type="text" class="form-control" id="address" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
 
-            <div id="dataList" class="row row-cols-1 row-cols-md-2 g-4"></div>
-
+        <!-- Container for displaying users -->
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="dataList">
+            <!-- User data will be inserted here via JavaScript -->
         </div>
+    </div>
 
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous">
-        </script>
-
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous">
-        </script>
-        <script src="script.js"></script>
-    </body>
+    <!-- Include JavaScript files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>
