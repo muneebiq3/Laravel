@@ -3,7 +3,7 @@
 
     <head>
         
-        <link rel="icon" href="../Images/icons/favicon.ico">
+        <link rel="icon" href="Images/icons/favicon.ico">
         <title>edyou</title>
 
         <meta charset="utf-8">
@@ -11,7 +11,7 @@
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-        <link rel="stylesheet" href="../style/style.css">
+        <link rel="stylesheet" href="style/style.css">
         
     </head>
 
@@ -27,15 +27,15 @@
 
                     <a class="menu-btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
 
-                        <img src="../Images/icons/menu-button.png" alt="menu button image" class="img-fluid">
+                        <img src="Images/icons/menu-button.png" alt="menu button image" class="img-fluid">
                         
                         <div class="offcanvas offcanvas-start bg-light border" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="width: 1000px;">
             
                             <div class="offcanvas-header">
             
-                                <img src="../Images/icons/sidebar-close-button.svg" alt="close button" class="img-fluid" type="button" data-bs-dismiss="offcanvas" aria-label="close">
+                                <img src="Images/icons/sidebar-close-button.svg" alt="close button" class="img-fluid" type="button" data-bs-dismiss="offcanvas" aria-label="close">
             
-                                <img src="../Images/notIcons/edyou-sidebar.svg" alt="edyou img" class="img-fluid">
+                                <img src="Images/notIcons/edyou-sidebar.svg" alt="edyou img" class="img-fluid">
             
                             </div>
             
@@ -116,7 +116,7 @@
                                     <div class="container">
                                         <div class="col-3">
             
-                                            <img src="../Images/notIcons/apple-button-sidebar-footer.svg" alt="apple button sidebar" >
+                                            <img src="Images/notIcons/apple-button-sidebar-footer.svg" alt="apple button sidebar" >
             
                                         </div>
                                     </div>
@@ -133,7 +133,7 @@
         
                 <div class="col-4 heading">
         
-                    <img src="../Images/notIcons/edyou-main-heading.png" alt="" class="img-fluid">
+                    <img src="Images/notIcons/edyou-main-heading.png" alt="" class="img-fluid">
         
                 </div>
         
@@ -200,7 +200,7 @@
 
                         </p>
 
-                        <img src="../Images/notIcons/line_home.png" alt="main heading underline" class="img-fluid line">
+                        <img src="Images/notIcons/line_home.png" alt="main heading underline" class="img-fluid line">
                         
                         <div class="mt-5 pt-5 pb-1 mt-md-3 pt-md-3 pb-md-0 ">
 
@@ -208,7 +208,7 @@
 
                                 Sign up Now
 
-                                <img src="../Images/icons/Arrow Icon.png" alt="" class="img-fluid">
+                                <img src="Images/icons/Arrow Icon.png" alt="" class="img-fluid">
 
                             </button>
 
@@ -231,19 +231,19 @@
                                             <p class="modal-title fw-bolder text-start waiting-list" id="staticBackdropLabel">Join the Waiting List and Secure Your Spot!</p>
 
                                             <p class="text-start">Exciting things are coming, and you don't want to miss out!</p>
-                                            <form action="" class="needs-validation" novalidate>
-                                                <input type="email" placeholder="Enter your email" class="form-control col-md-12 mb-3" required>
-                                                <input type="text" placeholder="Enter your username" class="form-control col-md-12 mb-3" required>
-                                                <input type="password" placeholder="Enter your password" class="form-control col-md-12 mb-3" required>
-                                                <input type="password" placeholder="Enter your password again" class="form-control col-md-12 mb-3" required>
+                                            <form action="process.php" method="post" class="needs-validation" novalidate>
+                                                
+                                                <input type="email" name="email" placeholder="Enter your email" class="form-control col-md-12 mb-3" required>
+                                                <input type="text" name="username" placeholder="Enter your username" class="form-control col-md-12 mb-3" required>
+                                                <input type="password" name="password" placeholder="Enter your password" class="form-control col-md-12 mb-3" required>
+                                                <input type="password" name="confirm_password" placeholder="Enter your password again" class="form-control col-md-12 mb-3" required>
 
                                                 <button class="btn btn-success col-md-12 w-100 main-submit" type="submit">
-
                                                     Join
-
                                                 </button>
-
+                                                
                                             </form>
+
                                         </div>
 
                                     </div>
@@ -254,7 +254,7 @@
 
                         </div>
                     
-                        <img src="../Images/icons/Mouse.png" alt="scroll mouse" class="img-fluid mouse-icon" onclick="scrollToSectionCover()">
+                        <img src="Images/icons/Mouse.png" alt="scroll mouse" class="img-fluid mouse-icon" onclick="scrollToSectionCover()">
 
                     </div>
 
@@ -266,139 +266,139 @@
 
                                 <div class="main-image position-absolute">
 
-                                    <img src="../Images/notIcons/Mobile logo Style.png" alt="edyou logo" class="img-fluid">
+                                    <img src="Images/notIcons/Mobile logo Style.png" alt="edyou logo" class="img-fluid">
                                         
                                 </div>
 
                                 <div class="image-1 position-absolute">
 
-                                    <img src="../Images/notIcons/image 22.png" alt="icon 1" class="img-fluid">
+                                    <img src="Images/notIcons/image 22.png" alt="icon 1" class="img-fluid">
 
                                 </div>    
 
                                 <div class="check-image-1 position-absolute">
 
-                                    <img src="../Images/notIcons/check-image-1.png" alt="check icon 1" class="img-fluid">
+                                    <img src="Images/notIcons/check-image-1.png" alt="check icon 1" class="img-fluid">
 
                                 </div>
 
                                 <div class="image-2 position-absolute">
 
-                                    <img src="../Images/notIcons/Group 494.png" alt="icon 2" class="img-fluid">
+                                    <img src="Images/notIcons/Group 494.png" alt="icon 2" class="img-fluid">
 
                                 </div>
 
                                 <div class="image-3 position-absolute">
 
-                                    <img src="../Images/notIcons/image 23.png" alt="icon 3" class="img-fluid">
+                                    <img src="Images/notIcons/image 23.png" alt="icon 3" class="img-fluid">
 
                                 </div>
 
                                 <div class="check-image-3 position-absolute">
 
-                                    <img src="../Images/notIcons/check-image-3.png" alt="check icon 3" class="img-fluid">
+                                    <img src="Images/notIcons/check-image-3.png" alt="check icon 3" class="img-fluid">
 
                                 </div>
 
                                 <div class="image-4 position-absolute">
 
-                                    <img src="../Images/notIcons/Rectangle 163.png" alt="icon 4" class="img-fluid">
+                                    <img src="Images/notIcons/Rectangle 163.png" alt="icon 4" class="img-fluid">
 
                                 </div>
 
                                 <div class="check-image-4 position-absolute">
 
-                                    <img src="../Images/notIcons/check-image-4.png" alt="check icon 4" class="img-fluid">
+                                    <img src="Images/notIcons/check-image-4.png" alt="check icon 4" class="img-fluid">
 
                                 </div>
 
                                 <div class="image-5 position-absolute">
 
-                                    <img src="../Images/notIcons/Group 497.png" alt="icon 5" class="img-fluid">
+                                    <img src="Images/notIcons/Group 497.png" alt="icon 5" class="img-fluid">
 
                                 </div>
 
                                 <div class="image-6 position-absolute">
 
-                                    <img src="../Images/notIcons/Rectangle 168.png" alt="icon 6" class="img-fluid">
+                                    <img src="Images/notIcons/Rectangle 168.png" alt="icon 6" class="img-fluid">
 
                                 </div>
 
                                 <div class="check-image-6 position-absolute">
 
-                                    <img src="../Images/notIcons/check-image-6.png" alt="check icon 6" class="img-fluid">
+                                    <img src="Images/notIcons/check-image-6.png" alt="check icon 6" class="img-fluid">
 
                                 </div>
 
                                 <div class="image-7 position-absolute">
 
-                                    <img src="../Images/notIcons/image 21.png" alt="icon 7" class="img-fluid">
+                                    <img src="Images/notIcons/image 21.png" alt="icon 7" class="img-fluid">
 
                                 </div>
 
                                 <div class="check-image-7 position-absolute">
 
-                                    <img src="../Images/notIcons/check-image-7.png" alt="check icon 7" class="img-fluid">
+                                    <img src="Images/notIcons/check-image-7.png" alt="check icon 7" class="img-fluid">
 
                                 </div>
 
                                 <div class="image-8 position-absolute">
 
-                                    <img src="../Images/notIcons/Group 493.png" alt="icon 8" class="img-fluid">
+                                    <img src="Images/notIcons/Group 493.png" alt="icon 8" class="img-fluid">
 
                                 </div>
 
                                 <div class="image-9 position-absolute">
 
-                                    <img src="../Images/notIcons/Avatar 16 1.png" alt="icon 9" class="img-fluid">
+                                    <img src="Images/notIcons/Avatar 16 1.png" alt="icon 9" class="img-fluid">
 
                                 </div>
 
                                 <div class="check-image-9 position-absolute">
 
-                                    <img src="../Images/notIcons/check-image-9.png" alt="check icon 9" class="img-fluid">
+                                    <img src="Images/notIcons/check-image-9.png" alt="check icon 9" class="img-fluid">
 
                                 </div>
 
                                 <div class="image-10 position-absolute">
 
-                                    <img src="../Images/notIcons/Rectangle 169.png" alt="icon 10" class="img-fluid">
+                                    <img src="Images/notIcons/Rectangle 169.png" alt="icon 10" class="img-fluid">
 
                                 </div>
 
                                 <div class="check-image-10 position-absolute">
 
-                                    <img src="../Images/notIcons/check-image-10.png" alt="check icon 10" class="img-fluid">
+                                    <img src="Images/notIcons/check-image-10.png" alt="check icon 10" class="img-fluid">
 
                                 </div>
 
                                 <div class="image-11 position-absolute">
 
-                                    <img src="../Images/notIcons/Group 495.png" alt="icon 11" class="img-fluid">
+                                    <img src="Images/notIcons/Group 495.png" alt="icon 11" class="img-fluid">
 
                                 </div>
 
                                 <div class="image-12 position-absolute">
 
-                                    <img src="../Images/notIcons/Rectangle 167.png" alt="icon 12" class="img-fluid">
+                                    <img src="Images/notIcons/Rectangle 167.png" alt="icon 12" class="img-fluid">
 
                                 </div>
 
                                 <div class="check-image-12 position-absolute">
 
-                                    <img src="../Images/notIcons/check-image-12.png" alt="check icon 12" class="img-fluid">
+                                    <img src="Images/notIcons/check-image-12.png" alt="check icon 12" class="img-fluid">
 
                                 </div>
 
                                 <div class="image-13 position-absolute">
 
-                                    <img src="../Images/notIcons/Rectangle 165.png" alt="icon 13" class="img-fluid">
+                                    <img src="Images/notIcons/Rectangle 165.png" alt="icon 13" class="img-fluid">
 
                                 </div>
 
                                 <div class="check-image-13 position-absolute">
 
-                                    <img src="../Images/notIcons/check-image-13.png" alt="check icon 13" class="img-fluid">
+                                    <img src="Images/notIcons/check-image-13.png" alt="check icon 13" class="img-fluid">
 
                                 </div>
 
@@ -442,7 +442,7 @@
 
                     <div class="col-12 d-flex justify-content-center cover-section">
 
-                        <img src="../Images/notIcons/Group 357.png" alt="cover brand picture" class="img-fluid pt-5">
+                        <img src="Images/notIcons/Group 357.png" alt="cover brand picture" class="img-fluid pt-5">
 
                     </div>
 
@@ -460,33 +460,33 @@
     
                         <div class="col-1 position-fixed button-container">
     
-                            <button onclick="scrollToSection(0)" class="border-0 bg-white image-button" data-index="0" data-image-default="../Images/icons/Post icon.png" data-image-selected="../Images/icons/Selected Post.png">
+                            <button onclick="scrollToSection(0)" class="border-0 bg-white image-button" data-index="0" data-image-default="Images/icons/Post icon.png" data-image-selected="Images/icons/Selected Post.png">
     
-                                <img src="../Images/icons/Post icon.png" alt="Post button" class="img-fluid">
+                                <img src="Images/icons/Post icon.png" alt="Post button" class="img-fluid">
                             
                             </button>
     
-                            <button onclick="scrollToSection(1)" class="border-0 bg-white image-button" data-index="0" data-image-default="../Images/icons/Chat.png" data-image-selected="../Images/icons/Selected Chat.png">
+                            <button onclick="scrollToSection(1)" class="border-0 bg-white image-button" data-index="0" data-image-default="Images/icons/Chat.png" data-image-selected="Images/icons/Selected Chat.png">
     
-                                <img src="../Images/icons/Chat.png" alt="Chat button" class="img-fluid">
+                                <img src="Images/icons/Chat.png" alt="Chat button" class="img-fluid">
                             
                             </button>
     
-                            <button onclick="scrollToSection(2)" class="border-0 bg-white image-button" data-index="0" data-image-default="../Images/icons/Events.png" data-image-selected="../Images/icons/Selected Events.png">
+                            <button onclick="scrollToSection(2)" class="border-0 bg-white image-button" data-index="0" data-image-default="Images/icons/Events.png" data-image-selected="Images/icons/Selected Events.png">
     
-                                <img src="../Images/icons/Events.png" alt="Events Button" class="img-fluid">
+                                <img src="Images/icons/Events.png" alt="Events Button" class="img-fluid">
                             
                             </button>
     
-                            <button onclick="scrollToSection(3)" class="border-0 bg-white image-button" data-index="0" data-image-default="../Images/icons/Community.png" data-image-selected="../Images/icons/Selected Community.png">
+                            <button onclick="scrollToSection(3)" class="border-0 bg-white image-button" data-index="0" data-image-default="Images/icons/Community.png" data-image-selected="Images/icons/Selected Community.png">
     
-                                <img src="../Images/icons/Community.png" alt="Community button" class="img-fluid">
+                                <img src="Images/icons/Community.png" alt="Community button" class="img-fluid">
                             
                             </button>
     
-                            <button onclick="scrollToSection(4)" class="border-0 bg-white image-button" data-index="0" data-image-default="../Images/icons/Story icon.png" data-image-selected="../Images/icons/Selected Story.png">
+                            <button onclick="scrollToSection(4)" class="border-0 bg-white image-button" data-index="0" data-image-default="Images/icons/Story icon.png" data-image-selected="Images/icons/Selected Story.png">
     
-                                <img src="../Images/icons/Story icon.png" alt="Story button" class="img-fluid">
+                                <img src="Images/icons/Story icon.png" alt="Story button" class="img-fluid">
                             
                             </button>
                             
@@ -498,7 +498,7 @@
                         <p>U decide how long your content lives</p>
                         <p>Self-Destruct times illustration</p>
     
-                        <img src="../Images/notIcons/Post.png" alt="" class="img-fluid image">
+                        <img src="Images/notIcons/Post.png" alt="" class="img-fluid image">
     
                     </div>
     
@@ -514,7 +514,7 @@
                         <p>Encrypted for your security.</p>
                         <p>Message 1 person, create a group and message more!</p>
         
-                        <img src="../Images/notIcons/Chat Images.png" alt="" class="img-fluid image">
+                        <img src="Images/notIcons/Chat Images.png" alt="" class="img-fluid image">
     
                     </div>
     
@@ -531,7 +531,7 @@
                         <p>Set the event, select the guest and send the event, we handle the rest.</p>
                         <p>Automatically enters in your event calendar.</p>
         
-                        <img src="../Images/notIcons/Birthday.png" alt="" class="img-fluid image">
+                        <img src="Images/notIcons/Birthday.png" alt="" class="img-fluid image">
     
                     </div>
     
@@ -547,7 +547,7 @@
                         <p>U can set up any type of group, whether it is with two people or establish a new community for the everyone, it's up to U.</p>
                         <p>U have public and private groups for you to decide to create or join.</p>
                         
-                        <img src="../Images/notIcons/Cafe.png" alt="" class="img-fluid image">
+                        <img src="Images/notIcons/Cafe.png" alt="" class="img-fluid image">
     
                     </div>
                 
@@ -562,7 +562,7 @@
                         <p class="h1 text-success">Stories</p>
                         <p>U can stay connected with your college friends and easily share your college memories and experiences all at once!</p>
         
-                        <img src="../Images/notIcons/Story.png" alt="" class="img-fluid story">
+                        <img src="Images/notIcons/Story.png" alt="" class="img-fluid story">
         
                     </div>
     
@@ -619,7 +619,7 @@
     
                         <div class="col-lg-10 col-sm-8 col-12 d-flex justify-content-sm-start justify-content-center mt-3">
     
-                            <img src="../Images/notIcons/edyou-footer.svg" alt="edyou logo" class="img-fluid" height="100px">
+                            <img src="Images/notIcons/edyou-footer.svg" alt="edyou logo" class="img-fluid" height="100px">
     
                         </div>
     
@@ -631,7 +631,7 @@
         
                         <div class="col-lg-10 col-sm-8 col-12 d-flex justify-content-sm-start justify-content-center mt-sm-3 mb-sm-5 mt-3 mb-1">
         
-                            <img src="../Images/notIcons/apple-button-footer.svg" alt="app store download button" class="img-fluid footer-apple-button" height="35px">
+                            <img src="Images/notIcons/apple-button-footer.svg" alt="app store download button" class="img-fluid footer-apple-button" height="35px">
         
                         </div>
     
@@ -691,7 +691,7 @@
                         <a href="#" class="footer-items">Privacy Policy</a>
         
                         <a href="#" class="footer-items">
-                            <img src="../Images/icons/Globe.png" class="footer-items" alt="globe">
+                            <img src="Images/icons/Globe.png" class="footer-items" alt="globe">
                             English
                         </a>
         
@@ -711,7 +711,7 @@
             integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
         </script>
 
-        <script src="../script/script.js"></script>
+        <script src="script/script.js"></script>
 
 
     </body>
