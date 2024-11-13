@@ -139,43 +139,39 @@
         
                 <div class="col-4 d-flex justify-content-center">
         
-                    <button type="button" class="btn btn-success btn-sm signin-btn" data-bs-toggle="modal" data-bs-target="#signInModal">
-                        Log In
-                    </button>
+                <!-- Button to Open Login Modal -->
+                <button type="button" class="btn btn-success btn-sm signin-btn" data-bs-toggle="modal" data-bs-target="#signInModal">
+                    Log In
+                </button>
 
-                    <div class="modal fade" id="signInModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+                <!-- Login Modal -->
+                <div class="modal fade" id="signInModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <svg type="button" class="mx-5 mt-3" data-bs-dismiss="modal" aria-label="Close" viewBox="0 0 16 16" width="2em" height="2em" role="img" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-arrow-left-circle">
+                                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"></path>
+                            </svg>
 
-                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-body p-5">
+                                <p class="modal-title fw-bolder text-start" id="signInModalLabel">Sign In to Your Account</p>
+                                <p class="text-start">Welcome back! Please sign in to continue.</p>
 
-                            <div class="modal-content">
+                                <!-- Login Form -->
+                                <form action="login.php" method="post" class="needs-validation" novalidate>
+                                    <input type="text" name="username" placeholder="Enter your username" class="form-control col-md-12 mb-3" required>
+                                    <input type="password" name="password" placeholder="Enter your password" class="form-control col-md-12 mb-3" required>
+                                    <button class="btn btn-success col-md-12 w-100" type="submit">Sign In</button>
+                                </form>
 
-                                <svg type="button" class="mx-5 mt-3" data-bs-dismiss="modal" aria-label="Close" viewBox="0 0 16 16" width="2em" height="2em" focusable="false" role="img" aria-label="arrow left circle" 
-                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-arrow-left-circle b-icon bi">
-                                    <g>
-                                        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"></path>
-                                    </g>
-                                </svg>
-
-                                <div class="modal-body p-5">
-
-                                    <p class="modal-title fw-bolder text-start fw-bolder text-start sign-in" id="signInModalLabel">Sign In to Your Account</p>
-
-                                    <p class="text-start">Welcome back! Please sign in to continue.</p>
-
-                                    <form action="" class="needs-validation" novalidate>
-
-                                        <input type="email" placeholder="Enter your email" class="form-control col-md-12 mb-3" required>
-                                        <input type="password" placeholder="Enter your password" class="form-control col-md-12 mb-3" required>
-                                        <button class="btn btn-success col-md-12 w-100" type="submit">Sign In</button>
-                                    </form>
-
-                                </div>
-
+                                <!-- Error message display (if any) -->
+                                <?php if (isset($_GET['error'])): ?>
+                                    <p class="text-danger mt-3"><?php echo htmlspecialchars($_GET['error']); ?></p>
+                                <?php endif; ?>
                             </div>
-
                         </div>
-
                     </div>
+                </div>
+
 
                 </div>
 
