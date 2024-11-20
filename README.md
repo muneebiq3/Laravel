@@ -26,8 +26,8 @@ To run these projects, ensure the following are installed on your system:
    ```bash
    git clone https://github.com/muneebiq3/Server-Side-PHP.git
 2. Place the project folder in the server directory (e.g., htdocs for XAMPP).
-3. Start your web server and navigate to the project folder in your browser:
-    http://localhost/Laravel/<project-folder>/
+3. Open a command prompt (CMD), navigate to the project directory, and run:
+    php artisan serve
 4. Follow the project-specific instructions in the respective directories or code comments.
 
 ## Contributions
