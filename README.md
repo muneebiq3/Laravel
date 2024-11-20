@@ -2,7 +2,7 @@
 
 ## Overview
 
-Welcome to my **Laravel** repository! This collection showcases various projects and assignments I developed using Laravel Framework for server-side web development. These projects emphasize server-side scripting, data processing, and integration with databases to create dynamic and functional web applications.
+Welcome to my **Laravel** repository! This collection showcases various projects and assignments I developed using the **Laravel Framework** for server-side web development. These projects emphasize server-side scripting, data processing, and integration with databases to create dynamic and functional web applications.
 
 ## Features
 
@@ -27,7 +27,28 @@ To run these projects, ensure the following are installed on your system:
 1. Clone the repository:
    ```bash
    git clone https://github.com/muneebiq3/Laravel.git
-2. Place the project folder in your desired directory.
-3. Open a command prompt (CMD), navigate to the project directory, and run:
+
+2. Navigate to your desired project directory and install dependencies:
+   cd <project-folder>
+   composer install
+
+3. Set up your environment:
+   - Rename **.env.example** to **.env**
+   - Generate an application key:
+      **php artisan key:generate**
+
+4. Create the necessary database and configure .env with the correct database credentials.
+
+5. Run migrations to set up the database schema:
+   **php artisan migrate**
+
+6. Finally, open a command prompt (CMD), navigate to the project directory, and run:
    **php artisan serve**
-4. Follow the project-specific instructions in the respective directories or code comments.
+
+7. Visit your project in a browser at:
+   **http://localhost:8000**
+
+8. Follow the project-specific instructions in the respective directories or code comments.
+
+## Contributions
+This is a personal repository for learning and experimentation. However, feel free to explore, fork, or suggest improvements via pull requests.
