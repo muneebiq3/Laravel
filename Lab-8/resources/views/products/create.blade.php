@@ -19,33 +19,32 @@
                 @csrf
 
                 <div class="mb-3">
-                <label for="inputName" class="formlabel"><strong>Name:</strong></label>
-                <input
-                type="text"
-                name="name"
-                class="form-control @error('name') is-invalid @enderror"
-                id="inputName"
-                placeholder="Name">
-                @error('name')
-                <div class="form-text text-danger">{{ $message }}</div>
-                @enderror
+                    <label for="inputName" class="form-label"><strong>Name:</strong></label>
+                    <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" id="inputName" placeholder="Name">
+                    @error('name')
+                    <div class="form-text text-danger">{{ $message }}</div>
+                    @enderror
                 </div>
 
                 <div class="mb-3">
+                    <label for="inputPrice" class="form-label"><strong>Price:</strong></label>
+                    <input type="number" name="price" step="0.01" class="form-control @error('price') is-invalid @enderror" id="inputPrice" placeholder="Price">
+                    @error('price')
+                    <div class="form-text text-danger">{{ $message }}</div>
+                    @enderror
+                </div>
 
-                    <label for="inputDetail" class="formlabel"><strong>Detail:</strong></label>
+                <div class="mb-3">
+                    <label for="inputDetail" class="form-label"><strong>Detail:</strong></label>
                     <textarea class="form-control @error('detail') is-invalid @enderror" style="height:150px" name="detail" id="inputDetail" placeholder="Detail"></textarea>
                     @error('detail')
                     <div class="form-text text-danger">{{ $message }}</div>
                     @enderror
-
                 </div>
 
                 <button type="submit" class="btn btn-success"><i class="fa-solid fafloppy-disk"></i> Submit</button>
 
             </form>
-
         </div>
-
 </div>
 @endsection
