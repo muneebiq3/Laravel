@@ -16,7 +16,7 @@ Welcome to my **Server-Side PHP** repository! This collection showcases various 
 To run these projects, ensure the following are installed on your system:
 
 1. **Web Server** (e.g., Apache or Nginx)
-2. **PHP** (version 7.x or later)
+2. **PHP** (version 8.2.x or later)
 3. **MySQL** (or an equivalent database management system)
 4. Optional: Tools like [XAMPP](https://www.apachefriends.org/) or [MAMP](https://www.mamp.info/) for easy setup.
 
