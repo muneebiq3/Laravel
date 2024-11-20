@@ -2,11 +2,11 @@
 
 ## Overview
 
-Welcome to my **Laravel** repository! This collection showcases various projects and assignments I developed using PHP for server-side web development. These projects emphasize server-side scripting, data processing, and integration with databases to create dynamic and functional web applications.
+Welcome to my **Laravel** repository! This collection showcases various projects and assignments I developed using Laravel Framework for server-side web development. These projects emphasize server-side scripting, data processing, and integration with databases to create dynamic and functional web applications.
 
 ## Features
 
-- **Dynamic Content Rendering**: Generate web pages dynamically with PHP scripts.
+- **Dynamic Content Rendering**: Generate web pages dynamically with Laravel.
 - **Form Handling**: Process and validate form inputs using secure PHP techniques.
 - **Database Interaction**: Use MySQL to store, retrieve, and manipulate data.
 - **Session Management**: Implement user session tracking for authentication and personalized experiences.
@@ -26,11 +26,4 @@ To run these projects, ensure the following are installed on your system:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/muneebiq3/Laravel.git
-2. Place the project folder in the server directory (e.g., htdocs for XAMPP).
-3. Open a command prompt (CMD), navigate to the project directory, and run:
-    php artisan serve
-4. Follow the project-specific instructions in the respective directories or code comments.
-
-## Contributions
-This is a personal repository for learning and experimentation. However, feel free to explore, fork, or suggest improvements via pull requests.
+   git clone https://github.com/muneebiq3/Server-Side-PHP.git
