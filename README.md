@@ -1,6 +1,7 @@
-# Server-Side PHP Projects
+# Laravel Projects
 
 ## Overview
+
 Welcome to my **Laravel** repository! This collection showcases various projects and assignments I developed using PHP for server-side web development. These projects emphasize server-side scripting, data processing, and integration with databases to create dynamic and functional web applications.
 
 ## Features
