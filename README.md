@@ -33,8 +33,8 @@ To run these projects, ensure the following are installed on your system:
    git clone https://github.com/muneebiq3/Laravel.git
 
 2. Navigate to your desired project directory and install dependencies:
-   cd "project-folder"
-   composer install
+   - cd "project-folder"
+   - composer install
 
 3. Set up your environment:
    - Rename **.env.example** to **.env**
